@@ -11,7 +11,7 @@ public class Braindead : MonoBehaviour
 
     void Start()
     {
-        targetPoint = new Vector3(Thrower.xTargetValue, Thrower.yTargetValue);
+        targetPoint = new Vector3(GetComponentInParent<Thrower>().xTargetValue, GetComponentInParent<Thrower>().yTargetValue);
     }
 
     private void Update()

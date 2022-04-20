@@ -6,14 +6,24 @@ public class Thrower : MonoBehaviour
 {
     public float cooldownReset;
     public float cooldown;
-    public static float xTargetValue;
-    public static float yTargetValue;
+    public float xTargetValue;
+    public float yTargetValue;
     public GameObject prefap;
+    string name;
 
     private void Start()
     {
+        name = gameObject.name;
+
         xTargetValue = GetComponent<BoxCollider2D>().offset.x + transform.position.x;
         yTargetValue = GetComponent<BoxCollider2D>().offset.y - transform.position.y;
+    }
+
+    private void Update()
+    {
+        cooldown -= Time.deltaTime;
+
+        Debug.Log(cooldown);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -22,19 +32,17 @@ public class Thrower : MonoBehaviour
         {
             if (cooldown <= 0)
             {
-                Instantiate(prefap, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+
+                GameObject Stone = Instantiate(prefap, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity) as GameObject;
+                Stone.transform.parent = GameObject.Find(name).transform;
 
                 cooldown = cooldownReset;
+
             }
             else
             {
-                cooldown -= Time.deltaTime; 
+                //cooldown -= Time.deltaTime; 
             }
-
-            Debug.Log(cooldown);
-            Debug.Log(xTargetValue);
-            Debug.Log(yTargetValue);
         }
     }
-
 }
