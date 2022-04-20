@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public GameObject prefap;
-    public float throwSpeed;
+    public float throwSpeed = 5;
     float cooldown;
 
     private void Start()
@@ -23,13 +23,15 @@ public class Enemy : MonoBehaviour
 
         //    Refresh_Rock();
         //}
+
+        Debug.Log(cooldown);
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            if (cooldown < 0)
+            if (cooldown <= 0)
             {
                 Instantiate(prefap, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
 

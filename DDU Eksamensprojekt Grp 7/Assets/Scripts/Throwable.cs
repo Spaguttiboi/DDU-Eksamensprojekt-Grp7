@@ -14,11 +14,13 @@ public class Throwable : MonoBehaviour
     float slowDown = 0;
     public bool destroyed = false;
     bool canKill = true;
-
+    Vector3 origin;
 
     private void Start()
     {
         player = GameObject.Find("Player");
+
+        origin = transform.position;
     }
 
     void Update()
@@ -30,12 +32,12 @@ public class Throwable : MonoBehaviour
             transform.position = Vector3.MoveTowards(currentPos, targetPos * scale, throwVelocity * Time.deltaTime);
             
 
-            if (targetPos.x > GameObject.Find("Dispenser").transform.position.x)
+            if (targetPos.x > origin.x)
             {
                 targetPos = targetPos - new Vector3(-0.1f, 0.01f, 0);
             }
 
-            if (targetPos.x < GameObject.Find("Dispenser").transform.position.x)
+            if (targetPos.x < origin.x)
             {
                 targetPos = targetPos - new Vector3(0.1f, 0.01f, 0);
             }
@@ -46,11 +48,11 @@ public class Throwable : MonoBehaviour
 
         if (roll)
         {
-            if (GameObject.Find("Dispenser").transform.position.x > currentPos.x)
+            if (origin.x > currentPos.x)
             {
                 transform.position = Vector3.MoveTowards(currentPos, (transform.position + Vector3.left), (3 - slowDown) * Time.deltaTime);
             }
-            else if (GameObject.Find("Dispenser").transform.position.x < currentPos.x)
+            else if (origin.x < currentPos.x)
             {
                 transform.position = Vector3.MoveTowards(currentPos, (-transform.position - Vector3.left), (3 - slowDown) * Time.deltaTime);
             }
@@ -70,7 +72,7 @@ public class Throwable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && ready == false)
         {
             targetPos = other.transform.position + new Vector3(0,1,0);
 
