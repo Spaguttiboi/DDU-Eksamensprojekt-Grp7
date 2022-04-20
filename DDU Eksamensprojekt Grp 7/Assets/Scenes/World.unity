@@ -530,7 +530,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.0031446815, y: 0.0031446815, z: 0}
+  m_ChunkCullingBounds: {x: 0.0015674233, y: 0.0015674233, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -14075,6 +14075,7 @@ MonoBehaviour:
   jumpHeight: 3
   pushLength: 0.7
   distance: 1
+  mood: 00000000
 --- !u!70 &1368515353
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
