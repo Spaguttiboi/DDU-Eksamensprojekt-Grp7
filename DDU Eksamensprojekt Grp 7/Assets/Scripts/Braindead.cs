@@ -8,10 +8,12 @@ public class Braindead : MonoBehaviour
     Vector3 throwPoint;
     Vector3 targetPoint;
     float throwVelocity = 15;
+    public float xOffset;
+    public float yOffset;
 
     void Start()
     {
-        targetPoint = new Vector3(GetComponentInParent<Thrower>().xTargetValue, GetComponentInParent<Thrower>().yTargetValue);
+        targetPoint = new Vector3(GetComponentInParent<Thrower>().xTargetValue + xOffset, GetComponentInParent<Thrower>().yTargetValue + yOffset);
     }
 
     private void Update()
