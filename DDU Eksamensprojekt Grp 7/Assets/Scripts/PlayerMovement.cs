@@ -16,34 +16,44 @@ public class PlayerMovement : MonoBehaviour
     public float distance = 1f;
     GameObject box;
 
-    public bool[] mood = new bool[4];
-
     private new Rigidbody2D rigidbody;
+
+    //Ikke optimal og burde ændres hvis mulig
+    public bool numb = true;
+    public bool angry = false;
+    public bool anxious = false;
+    public bool scared = false;
 
     Animator MoveAnimation;
 
     void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+       rigidbody = GetComponent<Rigidbody2D>();
+       MoveAnimation= GetComponent<Animator>();
     }
 
     void Update()
     {
         MoveDirection();
 
-        if (IsGrounded() && Input.GetButtonDown("Jump"))
-            rigidbody.velocity = Vector2.up * Mathf.Sqrt((jumpHeight * rigidbody.gravityScale) * (-2) * gravity);
 
-        //MoveAnimation.SetFloat("Horizontal", movement.x);
+        if (IsGrounded() && Input.GetButtonDown("Jump"))
+        {
+            rigidbody.velocity = Vector2.up * Mathf.Sqrt((jumpHeight * rigidbody.gravityScale) * (-2) * gravity);
+            MoveAnimation.SetBool("IsJumping", true);
+        }
+
+        if (IsGrounded())
+            MoveAnimation.SetBool("IsJumping", false);
 
         MoodChooser();
 
         //PushAndPullObjects();
-    }
+	}
 
-    private bool IsGrounded()
+	private bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, 1.1f, platformLayerMask) != false;
+        return Physics2D.Raycast(transform.position, Vector2.down, 1.3f, platformLayerMask) != false;
     }
 
     void MoveDirection()
@@ -56,43 +66,61 @@ public class PlayerMovement : MonoBehaviour
             rigidbody.velocity = new Vector2(+moveSpeed, rigidbody.velocity.y);
         else
             rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
+
+        FlipPlayerModel(direction);
+        MoveAnimation.SetFloat("Speed", Mathf.Abs(direction));
     }
+
+    void FlipPlayerModel(float direction)
+    {
+        if (direction == 1)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = -3f;
+            transform.localScale = scale;
+        }
+        else if (direction == -1)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = 3f;
+            transform.localScale = scale;
+        }
+    }
+
 
     void MoodChooser()
     {
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha1) && numb == false)
         {
-            /*
-            Array.fill(mood, false);
-            mood[0] = true;
+            numb = true;
+            angry = false;
+            anxious = false;
+            scared = false;
 
-            for(int i = 0; i<mood.Length; i++)
-                Debug.Log(mood);
-
-            */
-        }
-        if (Input.GetKey(KeyCode.Alpha2))
-        {
-            bool[] mood = new bool[4];
-            mood[1] = true;
-            for (int i = 0; i < mood.Length; i++)
-                Debug.Log(mood);
 
         }
-        if (Input.GetKey(KeyCode.Alpha3))
+        if (Input.GetKey(KeyCode.Alpha2) && angry == false)
         {
-            bool[] mood = new bool[4];
-            mood[2] = true;
-            for (int i = 0; i < mood.Length; i++)
-                Debug.Log(mood);
+            numb = false;
+            angry = true;
+            anxious = false;
+            scared = false;
 
         }
-        if (Input.GetKey(KeyCode.Alpha4))
+        if (Input.GetKey(KeyCode.Alpha3) && anxious == false)
         {
-            bool[] mood = new bool[4];
-            mood[3] = true;
-            for (int i = 0; i < mood.Length; i++)
-                Debug.Log(mood);
+            numb = false;
+            angry = false;
+            anxious = true;
+            scared = false;
+
+        }
+        if (Input.GetKey(KeyCode.Alpha4) && scared == false)
+        {
+            numb = false;
+            angry = false;
+            anxious = false;
+            scared = true;
 
         }
     }
@@ -100,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
 	private void OnDrawGizmos()
 	{
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + Vector2.right * transform.localScale.x * pushLength); 
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + Vector2.left * transform.localScale.x * pushLength); 
 	}
 
 
