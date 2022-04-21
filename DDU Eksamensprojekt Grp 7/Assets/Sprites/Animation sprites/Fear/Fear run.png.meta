@@ -1,7 +1,46 @@
 fileFormatVersion: 2
 guid: 39326c922e9375243887a54e5e45cb77
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5783753746933567553
+    second: Fear run_0
+  - first:
+      213: 6099674332842058691
+    second: Fear run_1
+  - first:
+      213: -2836811941924744901
+    second: Fear run_2
+  - first:
+      213: -6979535691046441603
+    second: Fear run_3
+  - first:
+      213: -8075512055852247913
+    second: Fear run_4
+  - first:
+      213: -6057148315771261204
+    second: Fear run_5
+  - first:
+      213: 3959739425456738652
+    second: Fear run_6
+  - first:
+      213: -531129890387749939
+    second: Fear run_7
+  - first:
+      213: 4903184330731490533
+    second: Fear run_8
+  - first:
+      213: -8583937810676957873
+    second: Fear run_9
+  - first:
+      213: -5220524929222504652
+    second: Fear run_10
+  - first:
+      213: -1704824556591871753
+    second: Fear run_11
+  - first:
+      213: -595385374638318700
+    second: Fear run_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +80,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -89,7 +128,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Fear run_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 248
+        width: 33
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1405f42a365044050800000000000000
+      internalID: 5783753746933567553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 248
+        width: 40
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c36e9efc7566a450800000000000000
+      internalID: 6099674332842058691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 253
+        width: 44
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b315df2a19e91a8d0800000000000000
+      internalID: -2836811941924744901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 251
+        width: 46
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d2406a445b32f90800000000000000
+      internalID: -6979535691046441603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 168
+        width: 44
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794da8332940eef80800000000000000
+      internalID: -8075512055852247913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_5
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 168
+        width: 40
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee299ee2bfa0fba0800000000000000
+      internalID: -6057148315771261204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_6
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 168
+        width: 32
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5155712702d3f630800000000000000
+      internalID: 3959739425456738652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_7
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 168
+        width: 30
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc398d1cd2c01a8f0800000000000000
+      internalID: -531129890387749939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 88
+        width: 34
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec038dab2c9b0440800000000000000
+      internalID: 4903184330731490533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_9
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 92
+        width: 39
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d3e847a0abfd880800000000000000
+      internalID: -8583937810676957873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_10
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 92
+        width: 39
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f0f948c38fc87b0800000000000000
+      internalID: -5220524929222504652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_11
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 88
+        width: 35
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f88afb291f3758e0800000000000000
+      internalID: -1704824556591871753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fear run_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 8
+        width: 35
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b58300824ccb7f0800000000000000
+      internalID: -595385374638318700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

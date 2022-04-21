@@ -8,11 +8,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask platformLayerMask;
     [SerializeField] private LayerMask ObjectMask;
 
-    public float moveSpeed = 5f;
+    public float moveSpeed = 3f;
     public float jumpHeight = 10f;
     float gravity = -9.82f;
 
-    public float pushLength = 0.7f;
+    public float pushLength = 0.3f;
     public float distance = 1f;
     GameObject box;
 
@@ -36,15 +36,20 @@ public class PlayerMovement : MonoBehaviour
     {
         MoveDirection();
 
+        /*
+        if(scared)
+            moveSpeed =
+        else
+            movespeed = 3f;
+        */
 
         if (IsGrounded() && Input.GetButtonDown("Jump"))
         {
             rigidbody.velocity = Vector2.up * Mathf.Sqrt((jumpHeight * rigidbody.gravityScale) * (-2) * gravity);
             MoveAnimation.SetBool("IsJumping", true);
-        }
-
-        if (IsGrounded())
+            
             MoveAnimation.SetBool("IsJumping", false);
+        }
 
         MoodChooser();
 
@@ -90,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
     void MoodChooser()
     {
+        
         if (Input.GetKey(KeyCode.Alpha1) && numb == false)
         {
             numb = true;
@@ -121,6 +127,8 @@ public class PlayerMovement : MonoBehaviour
             angry = false;
             anxious = false;
             scared = true;
+
+            //movespeed
 
         }
     }
