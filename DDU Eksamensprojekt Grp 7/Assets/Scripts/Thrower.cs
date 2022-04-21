@@ -23,7 +23,7 @@ public class Thrower : MonoBehaviour
     {
         cooldown -= Time.deltaTime;
 
-        Debug.Log(cooldown);
+        //Debug.Log(cooldown);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
