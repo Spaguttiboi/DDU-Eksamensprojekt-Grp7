@@ -6,7 +6,6 @@ public class PlayerPos : MonoBehaviour
 {
     private CheckpointMaster cm;
 
-
     void Start()
     {
         cm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointMaster>();
