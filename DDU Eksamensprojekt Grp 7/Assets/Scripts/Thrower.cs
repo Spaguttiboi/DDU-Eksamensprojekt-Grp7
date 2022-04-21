@@ -10,13 +10,15 @@ public class Thrower : MonoBehaviour
     public float yTargetValue;
     public GameObject prefap;
     string name;
+    public float xOffset;
+    public float yOffset;
 
     private void Start()
     {
         name = gameObject.name;
 
-        xTargetValue = GetComponent<BoxCollider2D>().offset.x + transform.position.x;
-        yTargetValue = GetComponent<BoxCollider2D>().offset.y - transform.position.y;
+        xTargetValue = GetComponent<BoxCollider2D>().offset.x + transform.position.x + xOffset;
+        yTargetValue = GetComponent<BoxCollider2D>().offset.y - transform.position.y + yOffset;
     }
 
     private void Update()
