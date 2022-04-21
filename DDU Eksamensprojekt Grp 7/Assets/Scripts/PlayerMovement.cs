@@ -6,15 +6,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private LayerMask platformLayerMask;
-    [SerializeField] private LayerMask ObjectMask;
 
     public float moveSpeed = 3f;
     public float jumpHeight = 10f;
     float gravity = -9.82f;
 
-    public float pushLength = 0.3f;
+    public float pushLength = 0.2f;
     public float distance = 1f;
-    GameObject box;
 
     private new Rigidbody2D rigidbody;
 
@@ -36,13 +34,6 @@ public class PlayerMovement : MonoBehaviour
     {
         MoveDirection();
 
-        /*
-        if(scared)
-            moveSpeed =
-        else
-            movespeed = 3f;
-        */
-
         if (IsGrounded() && Input.GetButtonDown("Jump"))
         {
             rigidbody.velocity = Vector2.up * Mathf.Sqrt((jumpHeight * rigidbody.gravityScale) * (-2) * gravity);
@@ -52,8 +43,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         MoodChooser();
-
-        //PushAndPullObjects();
 	}
 
 	private bool IsGrounded()
@@ -138,27 +127,4 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + Vector2.left * transform.localScale.x * pushLength); 
 	}
-
-
-    /*
-    void PushAndPullObjects()
-    {
-        Physics2D.queriesStartInColliders = false;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * transform.localScale.x, pushLength, ObjectMask);
-
-        if (hit.collider != null && hit.collider.gameObject.tag == "Pushable" && angry && Input.GetKey(KeyCode.E))
-        {
-            box = hit.collider.gameObject;
-            box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
-            box.GetComponent<FixedJoint2D>().enabled = true;
-            box.GetComponent<ObjectPull>().beingPushed = true;
-
-        }
-        else if (Input.GetKeyUp(KeyCode.E))
-        {
-            box.GetComponent<FixedJoint2D>().enabled = false;
-            box.GetComponent<ObjectPull>().beingPushed = false;
-        }
-    }
-    */
 }

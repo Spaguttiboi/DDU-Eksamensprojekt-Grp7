@@ -19,11 +19,26 @@ public class PushPullObject : MonoBehaviour
 	private void Update()
 	{
 		correctMood = test.angry;
-		RaycastHit2D contact = Physics2D.Raycast(transform.position, Vector2.right, 0.7f, objectLayerMask);
+		RaycastHit2D contactright = Physics2D.Raycast(transform.position, Vector2.right, 0.5f, objectLayerMask);
 
-		if (PushableObject() && Input.GetKeyDown(KeyCode.E) && correctMood)
+		if (PushableObjectRight() && Input.GetKeyDown(KeyCode.E) && correctMood)
 		{
-			moveableObject = contact.collider.gameObject;
+			moveableObject = contactright.collider.gameObject;
+
+			moveableObject.GetComponent<FixedJoint2D>().enabled = false;
+			moveableObject.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
+		}
+		else if (Input.GetKeyUp(KeyCode.E) && correctMood)
+		{
+			moveableObject.GetComponent<FixedJoint2D>().enabled = true;
+			moveableObject.GetComponent<FixedJoint2D>().connectedBody = null;
+		}
+
+		RaycastHit2D contactleft = Physics2D.Raycast(transform.position, Vector2.left, 0.5f, objectLayerMask);
+
+		if (PushableObjectLeft() && Input.GetKeyDown(KeyCode.E) && correctMood)
+		{
+			moveableObject = contactleft.collider.gameObject;
 
 			moveableObject.GetComponent<FixedJoint2D>().enabled = false;
 			moveableObject.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
@@ -35,9 +50,15 @@ public class PushPullObject : MonoBehaviour
 		}
 	}
 
-	private bool PushableObject()
+	private bool PushableObjectRight()
 	{
-		return Physics2D.Raycast(transform.position, Vector2.right, 0.7f, objectLayerMask) != false;
+		return Physics2D.Raycast(transform.position, Vector2.right, 0.5f, objectLayerMask) != false;
 	}
+
+	private bool PushableObjectLeft()
+	{
+		return Physics2D.Raycast(transform.position, Vector2.left, 0.5f, objectLayerMask) != false;
+	}
+
 }
 
