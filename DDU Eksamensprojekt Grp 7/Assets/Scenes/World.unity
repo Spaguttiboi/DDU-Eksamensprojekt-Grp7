@@ -42040,14 +42040,14 @@ MonoBehaviour:
   angry: 0
   anxious: 0
   scared: 0
-  audioSource: {fileID: 0}
-  jumpSound: {fileID: 0}
-  landSound: {fileID: 0}
-  deathSound: {fileID: 0}
-  angrySound: {fileID: 0}
-  anxietySound: {fileID: 0}
-  numbSound: {fileID: 0}
-  runSound: {fileID: 0}
+  audioSource: {fileID: 2077535196}
+  jumpSound: {fileID: 8300000, guid: b20e11b074bfd074d98da3ae08a0ba9d, type: 3}
+  landSound: {fileID: 8300000, guid: 1a085ce0baefb21439cc2fdd6419a216, type: 3}
+  deathSound: {fileID: 8300000, guid: 089b56b790105fa47b093cb4d874142b, type: 3}
+  angrySound: {fileID: 8300000, guid: d6d3ee059f7c3cb47a8d1671442cd3ad, type: 3}
+  anxietySound: {fileID: 8300000, guid: acff92c1c018ce742b14cfd3ea0b4d11, type: 3}
+  numbSound: {fileID: 8300000, guid: 98a7e77219fc7564bba4d4917d067ea1, type: 3}
+  runSound: {fileID: 8300000, guid: 8b461ee7c145ce342bbfb0cfe59a998b, type: 3}
 --- !u!95 &1368515353
 Animator:
   serializedVersion: 3
@@ -54021,7 +54021,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
