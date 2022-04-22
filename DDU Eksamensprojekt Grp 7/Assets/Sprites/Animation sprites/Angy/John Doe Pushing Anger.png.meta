@@ -1,40 +1,28 @@
 fileFormatVersion: 2
-guid: 01bdc6055ab66d24193924a1dc6bc131
+guid: 52018c5c0ef89dd4ba44a9d35c8948de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3227429012745130388
-    second: Fear walk_0
+      213: -794653215628648122
+    second: John Doe Pushing Anger_0
   - first:
-      213: -5374048500738753220
-    second: Fear walk_1
+      213: 7396917401199930957
+    second: John Doe Pushing Anger_1
   - first:
-      213: -3144665676628230949
-    second: Fear walk_2
+      213: 3235851371428379627
+    second: John Doe Pushing Anger_2
   - first:
-      213: 7640139055336440214
-    second: Fear walk_3
+      213: 8085336571682056680
+    second: John Doe Pushing Anger_3
   - first:
-      213: -61693647902588841
-    second: Fear walk_4
+      213: 1278711897924590558
+    second: John Doe Pushing Anger_4
   - first:
-      213: 1450319362267846342
-    second: Fear walk_5
+      213: 6127612638762386733
+    second: John Doe Pushing Anger_5
   - first:
-      213: 7992501726862134045
-    second: Fear walk_6
-  - first:
-      213: 8326623377112663940
-    second: Fear walk_7
-  - first:
-      213: 7052072827549659367
-    second: Fear walk_8
-  - first:
-      213: 6153763183981303148
-    second: Fear walk_9
-  - first:
-      213: -8114429393759406051
-    second: Fear walk_10
+      213: 9004452911183429701
+    second: John Doe Pushing Anger_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,232 +112,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fear walk_0
+      name: John Doe Pushing Anger_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 168
-        width: 31
+        x: 3
+        y: 167
+        width: 47
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 491967266912acc20800000000000000
-      internalID: 3227429012745130388
+      spriteID: 64125d25c13d8f4f0800000000000000
+      internalID: -794653215628648122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_1
+      name: John Doe Pushing Anger_1
       rect:
         serializedVersion: 2
-        x: 78
-        y: 168
-        width: 34
+        x: 67
+        y: 167
+        width: 47
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3dfebb8c5b8b65b0800000000000000
-      internalID: -5374048500738753220
+      spriteID: d4e6d639f2127a660800000000000000
+      internalID: 7396917401199930957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_2
+      name: John Doe Pushing Anger_2
       rect:
         serializedVersion: 2
-        x: 139
-        y: 168
-        width: 39
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdcf53f6a37eb54d0800000000000000
-      internalID: -3144665676628230949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_3
-      rect:
-        serializedVersion: 2
-        x: 203
-        y: 168
-        width: 37
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 691caebddf9370a60800000000000000
-      internalID: 7640139055336440214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_4
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 88
-        width: 30
+        x: 131
+        y: 167
+        width: 47
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7504edf34f1d42ff0800000000000000
-      internalID: -61693647902588841
+      spriteID: bebf2f39dad08ec20800000000000000
+      internalID: 3235851371428379627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_5
+      name: John Doe Pushing Anger_3
       rect:
         serializedVersion: 2
-        x: 78
-        y: 88
-        width: 30
+        x: 3
+        y: 87
+        width: 47
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c698de96c1902410800000000000000
-      internalID: 1450319362267846342
+      spriteID: 8e9659426c2e43070800000000000000
+      internalID: 8085336571682056680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_6
+      name: John Doe Pushing Anger_4
       rect:
         serializedVersion: 2
-        x: 142
-        y: 88
-        width: 32
+        x: 67
+        y: 87
+        width: 47
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1b405879f11bee60800000000000000
-      internalID: 7992501726862134045
+      spriteID: edb5cdd32b5eeb110800000000000000
+      internalID: 1278711897924590558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_7
+      name: John Doe Pushing Anger_5
       rect:
         serializedVersion: 2
-        x: 206
-        y: 88
-        width: 32
+        x: 131
+        y: 87
+        width: 47
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 487834b58db1e8370800000000000000
-      internalID: 8326623377112663940
+      spriteID: d2540aeba37a90550800000000000000
+      internalID: 6127612638762386733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_8
+      name: John Doe Pushing Anger_6
       rect:
         serializedVersion: 2
-        x: 11
-        y: 8
-        width: 35
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e038488fdefdd160800000000000000
-      internalID: 7052072827549659367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_9
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 8
-        width: 34
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c651515030f866550800000000000000
-      internalID: 6153763183981303148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_10
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 8
-        width: 28
+        x: 3
+        y: 7
+        width: 47
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d187bfd5571c36f80800000000000000
-      internalID: -8114429393759406051
+      spriteID: 54002df073e36fc70800000000000000
+      internalID: 9004452911183429701
       vertices: []
       indices: 
       edges: []

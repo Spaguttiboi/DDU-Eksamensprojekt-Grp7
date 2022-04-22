@@ -1,40 +1,40 @@
 fileFormatVersion: 2
-guid: 01bdc6055ab66d24193924a1dc6bc131
+guid: ae8aba0841e49194f902e8c2764414fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3227429012745130388
-    second: Fear walk_0
+      213: 1928982354032966888
+    second: John Doe Walking animation Anxiety_0
   - first:
-      213: -5374048500738753220
-    second: Fear walk_1
+      213: -1457433597446831195
+    second: John Doe Walking animation Anxiety_1
   - first:
-      213: -3144665676628230949
-    second: Fear walk_2
+      213: 7080660514173531103
+    second: John Doe Walking animation Anxiety_2
   - first:
-      213: 7640139055336440214
-    second: Fear walk_3
+      213: 3982826230316913889
+    second: John Doe Walking animation Anxiety_3
   - first:
-      213: -61693647902588841
-    second: Fear walk_4
+      213: -6067154440089966562
+    second: John Doe Walking animation Anxiety_4
   - first:
-      213: 1450319362267846342
-    second: Fear walk_5
+      213: -4122413449510875931
+    second: John Doe Walking animation Anxiety_5
   - first:
-      213: 7992501726862134045
-    second: Fear walk_6
+      213: -7650477582843030701
+    second: John Doe Walking animation Anxiety_6
   - first:
-      213: 8326623377112663940
-    second: Fear walk_7
+      213: -3035619411687824105
+    second: John Doe Walking animation Anxiety_7
   - first:
-      213: 7052072827549659367
-    second: Fear walk_8
+      213: -2728254456449461955
+    second: John Doe Walking animation Anxiety_8
   - first:
-      213: 6153763183981303148
-    second: Fear walk_9
+      213: 6602888457105752303
+    second: John Doe Walking animation Anxiety_9
   - first:
-      213: -8114429393759406051
-    second: Fear walk_10
+      213: 8025729394959910563
+    second: John Doe Walking animation Anxiety_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,7 +124,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fear walk_0
+      name: John Doe Walking animation Anxiety_0
       rect:
         serializedVersion: 2
         x: 14
@@ -138,14 +138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 491967266912acc20800000000000000
-      internalID: 3227429012745130388
+      spriteID: 8ecb1261b3f15ca10800000000000000
+      internalID: 1928982354032966888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_1
+      name: John Doe Walking animation Anxiety_1
       rect:
         serializedVersion: 2
         x: 78
@@ -159,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3dfebb8c5b8b65b0800000000000000
-      internalID: -5374048500738753220
+      spriteID: 5a3467c6dd726cbe0800000000000000
+      internalID: -1457433597446831195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_2
+      name: John Doe Walking animation Anxiety_2
       rect:
         serializedVersion: 2
         x: 139
         y: 168
         width: 39
-        height: 64
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdcf53f6a37eb54d0800000000000000
-      internalID: -3144665676628230949
+      spriteID: fd3b272093f834260800000000000000
+      internalID: 7080660514173531103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_3
+      name: John Doe Walking animation Anxiety_3
       rect:
         serializedVersion: 2
         x: 203
         y: 168
         width: 37
-        height: 64
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,14 +201,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 691caebddf9370a60800000000000000
-      internalID: 7640139055336440214
+      spriteID: 1e4d524ca57d54730800000000000000
+      internalID: 3982826230316913889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_4
+      name: John Doe Walking animation Anxiety_4
       rect:
         serializedVersion: 2
         x: 14
@@ -222,14 +222,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7504edf34f1d42ff0800000000000000
-      internalID: -61693647902588841
+      spriteID: e18e0019e232dcba0800000000000000
+      internalID: -6067154440089966562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_5
+      name: John Doe Walking animation Anxiety_5
       rect:
         serializedVersion: 2
         x: 78
@@ -243,14 +243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c698de96c1902410800000000000000
-      internalID: 1450319362267846342
+      spriteID: 5ec8c942fce3ac6c0800000000000000
+      internalID: -4122413449510875931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_6
+      name: John Doe Walking animation Anxiety_6
       rect:
         serializedVersion: 2
         x: 142
@@ -264,14 +264,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1b405879f11bee60800000000000000
-      internalID: 7992501726862134045
+      spriteID: 3535d802c2b04d590800000000000000
+      internalID: -7650477582843030701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_7
+      name: John Doe Walking animation Anxiety_7
       rect:
         serializedVersion: 2
         x: 206
@@ -285,20 +285,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 487834b58db1e8370800000000000000
-      internalID: 8326623377112663940
+      spriteID: 715211d7a305fd5d0800000000000000
+      internalID: -3035619411687824105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_8
+      name: John Doe Walking animation Anxiety_8
       rect:
         serializedVersion: 2
         x: 11
         y: 8
         width: 35
-        height: 64
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,20 +306,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e038488fdefdd160800000000000000
-      internalID: 7052072827549659367
+      spriteID: d31147ad60b432ad0800000000000000
+      internalID: -2728254456449461955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_9
+      name: John Doe Walking animation Anxiety_9
       rect:
         serializedVersion: 2
         x: 75
         y: 8
         width: 34
-        height: 64
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,14 +327,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c651515030f866550800000000000000
-      internalID: 6153763183981303148
+      spriteID: fe0c051711c22ab50800000000000000
+      internalID: 6602888457105752303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fear walk_10
+      name: John Doe Walking animation Anxiety_10
       rect:
         serializedVersion: 2
         x: 142
@@ -348,8 +348,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d187bfd5571c36f80800000000000000
-      internalID: -8114429393759406051
+      spriteID: 3a60ff1dc5e116f60800000000000000
+      internalID: 8025729394959910563
       vertices: []
       indices: 
       edges: []

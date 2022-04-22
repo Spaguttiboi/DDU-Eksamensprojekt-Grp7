@@ -1,40 +1,40 @@
 fileFormatVersion: 2
-guid: 01bdc6055ab66d24193924a1dc6bc131
+guid: 6a1f3e01dc5d6d2408df4420ed744470
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3227429012745130388
-    second: Fear walk_0
+      213: -7893902989900253947
+    second: John Doe Standing Jumping anger_0
   - first:
-      213: -5374048500738753220
-    second: Fear walk_1
+      213: -4595087843325996372
+    second: John Doe Standing Jumping anger_1
   - first:
-      213: -3144665676628230949
-    second: Fear walk_2
+      213: -6906132185598427324
+    second: John Doe Standing Jumping anger_2
   - first:
-      213: 7640139055336440214
-    second: Fear walk_3
+      213: 9093491041176924174
+    second: John Doe Standing Jumping anger_3
   - first:
-      213: -61693647902588841
-    second: Fear walk_4
+      213: 6522634707811825243
+    second: John Doe Standing Jumping anger_4
   - first:
-      213: 1450319362267846342
-    second: Fear walk_5
+      213: -4773785205237229273
+    second: John Doe Standing Jumping anger_5
   - first:
-      213: 7992501726862134045
-    second: Fear walk_6
+      213: 4671691964294590556
+    second: John Doe Standing Jumping anger_6
   - first:
-      213: 8326623377112663940
-    second: Fear walk_7
+      213: 8337674888963733036
+    second: John Doe Standing Jumping anger_7
   - first:
-      213: 7052072827549659367
-    second: Fear walk_8
+      213: -8148271074194414771
+    second: John Doe Standing Jumping anger_8
   - first:
-      213: 6153763183981303148
-    second: Fear walk_9
+      213: -8598851586649568943
+    second: John Doe Standing Jumping anger_9
   - first:
-      213: -8114429393759406051
-    second: Fear walk_10
+      213: 9136437625602112124
+    second: John Doe Standing Jumping anger_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,11 +124,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fear walk_0
+      name: John Doe Standing Jumping anger_0
       rect:
         serializedVersion: 2
-        x: 14
+        x: 12
         y: 168
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505f99bed09337290800000000000000
+      internalID: -7893902989900253947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe Standing Jumping anger_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 168
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca296dac3f7fa30c0800000000000000
+      internalID: -4595087843325996372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe Standing Jumping anger_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 168
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f73811e5d7820a0800000000000000
+      internalID: -6906132185598427324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe Standing Jumping anger_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 168
+        width: 37
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e003c8d2ce1923e70800000000000000
+      internalID: 9093491041176924174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe Standing Jumping anger_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 91
+        width: 43
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56f1c655bd058a50800000000000000
+      internalID: 6522634707811825243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe Standing Jumping anger_5
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 89
+        width: 49
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729d1dff5ab10cdb0800000000000000
+      internalID: -4773785205237229273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe Standing Jumping anger_6
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 85
+        width: 49
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5073dff61f25d040800000000000000
+      internalID: 4671691964294590556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe Standing Jumping anger_7
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 85
+        width: 49
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26b069f22f55b370800000000000000
+      internalID: 8337674888963733036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe Standing Jumping anger_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 7
+        width: 43
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d432d0121a68bee80800000000000000
+      internalID: -8148271074194414771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe Standing Jumping anger_9
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 8
+        width: 35
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159c2756a0ebaa880800000000000000
+      internalID: -8598851586649568943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: John Doe Standing Jumping anger_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 8
         width: 31
         height: 69
       alignment: 0
@@ -138,218 +348,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 491967266912acc20800000000000000
-      internalID: 3227429012745130388
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_1
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 168
-        width: 34
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3dfebb8c5b8b65b0800000000000000
-      internalID: -5374048500738753220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_2
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 168
-        width: 39
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdcf53f6a37eb54d0800000000000000
-      internalID: -3144665676628230949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_3
-      rect:
-        serializedVersion: 2
-        x: 203
-        y: 168
-        width: 37
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 691caebddf9370a60800000000000000
-      internalID: 7640139055336440214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_4
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 88
-        width: 30
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7504edf34f1d42ff0800000000000000
-      internalID: -61693647902588841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_5
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 88
-        width: 30
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c698de96c1902410800000000000000
-      internalID: 1450319362267846342
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_6
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 88
-        width: 32
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1b405879f11bee60800000000000000
-      internalID: 7992501726862134045
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_7
-      rect:
-        serializedVersion: 2
-        x: 206
-        y: 88
-        width: 32
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 487834b58db1e8370800000000000000
-      internalID: 8326623377112663940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_8
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 8
-        width: 35
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e038488fdefdd160800000000000000
-      internalID: 7052072827549659367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_9
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 8
-        width: 34
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c651515030f866550800000000000000
-      internalID: 6153763183981303148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fear walk_10
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 8
-        width: 28
-        height: 69
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d187bfd5571c36f80800000000000000
-      internalID: -8114429393759406051
+      spriteID: c7af6821d952bce70800000000000000
+      internalID: 9136437625602112124
       vertices: []
       indices: 
       edges: []
