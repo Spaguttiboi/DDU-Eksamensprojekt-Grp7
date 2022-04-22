@@ -11,6 +11,8 @@ public class Braindead : MonoBehaviour
 
     void Start()
     {
+        throwVelocity = GetComponentInParent<Thrower>().throwForce;
+
         targetPoint = new Vector3(GetComponentInParent<Thrower>().xTargetValue, GetComponentInParent<Thrower>().yTargetValue);
     }
 

@@ -12,6 +12,7 @@ public class Thrower : MonoBehaviour
     string name;
     public float xOffset;
     public float yOffset;
+    public float throwForce;
 
     private void Start()
     {

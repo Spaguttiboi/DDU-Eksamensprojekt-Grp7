@@ -33,11 +33,22 @@ public class PlayerMovement : MonoBehaviour
     Camera playerCamera;
     Animator MoveAnimation;
 
+    public AudioSource audioSource;
+
+    //Stingers
+    public AudioClip jumpSound;
+    public AudioClip landSound;
+    public AudioClip deathSound;
+    public AudioClip angrySound;
+    public AudioClip anxietySound;
+    public AudioClip numbSound;
+    public AudioClip runSound;
+
     void Awake()
     {
-       rigidbody = GetComponent<Rigidbody2D>();
-       MoveAnimation = GetComponent<Animator>();
-       playerCamera = GetComponentInChildren<Camera>();
+        rigidbody = GetComponent<Rigidbody2D>();
+        MoveAnimation = GetComponent<Animator>();
+        playerCamera = GetComponentInChildren<Camera>();
     }
 
     void Update()
@@ -51,18 +62,26 @@ public class PlayerMovement : MonoBehaviour
             rigidbody.velocity = Vector2.up * Mathf.Sqrt((jumpHeight * rigidbody.gravityScale) * (-2) * gravity);
             MoveAnimation.SetBool("IsJumping", true);
             plswork = true;
+
+            audioSource.loop = false;
+            audioSource.clip = jumpSound;
+            audioSource.Play();
         }
         if (plswork && IsGrounded() && Time.time > timework)
         {
-            timework = Time.time + 2f;
+            timework = Time.time + 1f;
             MoveAnimation.SetBool("IsJumping", false);
             plswork = false;
+
+            audioSource.loop = false;
+            audioSource.clip = landSound;
+            audioSource.Play();
         }
 
         temperaryMovementSystem();
-	}
+    }
 
-	private bool IsGrounded()
+    private bool IsGrounded()
     {
         return Physics2D.Raycast(transform.position, Vector2.down, 1.3f, platformLayerMask) != false;
     }
@@ -100,7 +119,6 @@ public class PlayerMovement : MonoBehaviour
 
     void MoodChooser()
     {
-        
         if (Input.GetKey(KeyCode.Alpha1) && numb == false)
         {
             numb = true;
@@ -108,7 +126,9 @@ public class PlayerMovement : MonoBehaviour
             anxious = false;
             scared = false;
 
-
+            audioSource.loop = false;
+            audioSource.clip = numbSound;
+            audioSource.Play();
         }
         if (Input.GetKey(KeyCode.Alpha2) && angry == false)
         {
@@ -117,6 +137,9 @@ public class PlayerMovement : MonoBehaviour
             anxious = false;
             scared = false;
 
+            audioSource.loop = false;
+            audioSource.clip = angrySound;
+            audioSource.Play();
         }
         if (Input.GetKey(KeyCode.Alpha3) && anxious == false)
         {
@@ -125,6 +148,9 @@ public class PlayerMovement : MonoBehaviour
             anxious = true;
             scared = false;
 
+            audioSource.loop = false;
+            audioSource.clip = anxietySound;
+            audioSource.Play();
         }
         if (Input.GetKey(KeyCode.Alpha4) && scared == false)
         {
@@ -132,14 +158,16 @@ public class PlayerMovement : MonoBehaviour
             angry = false;
             anxious = false;
             scared = true;
+
+
         }
     }
 
-	private void OnDrawGizmos()
-	{
+    private void OnDrawGizmos()
+    {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, (Vector2)transform.position + Vector2.left * transform.localScale.x * pushLength); 
-	}
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + Vector2.left * transform.localScale.x * pushLength);
+    }
 
     void temperaryMovementSystem()
     {
@@ -150,6 +178,10 @@ public class PlayerMovement : MonoBehaviour
             angry = false;
             anxious = false;
             scared = false;
+
+            audioSource.loop = false;
+            audioSource.clip = numbSound;
+            audioSource.Play();
         }
         if (Input.GetKey(KeyCode.Alpha2) && angry == false)
         {
@@ -157,6 +189,10 @@ public class PlayerMovement : MonoBehaviour
             angry = true;
             anxious = false;
             scared = false;
+
+            audioSource.loop = false;
+            audioSource.clip = angrySound;
+            audioSource.Play();
         }
         if (Input.GetKey(KeyCode.Alpha3) && anxious == false)
         {
@@ -164,6 +200,10 @@ public class PlayerMovement : MonoBehaviour
             angry = false;
             anxious = true;
             scared = false;
+
+            audioSource.loop = false;
+            audioSource.clip = anxietySound;
+            audioSource.Play();
         }
         if (Input.GetKey(KeyCode.Alpha4) && scared == false)
         {
@@ -186,8 +226,13 @@ public class PlayerMovement : MonoBehaviour
         if (numb || angry || anxious)
             moveSpeed = playerSpeed;
         else if (scared)
+        {
             moveSpeed = scaredPlayerSpeed;
 
+            audioSource.loop = true;
+            audioSource.clip = runSound;
+            audioSource.Play();
+        }
         //Change jump height when anxious
         if (numb || angry || scared)
         {
@@ -202,7 +247,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        
+
 
         //Visual system
         FlipPlayerModel(direction);
