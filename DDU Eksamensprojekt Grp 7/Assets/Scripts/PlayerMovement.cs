@@ -87,13 +87,13 @@ public class PlayerMovement : MonoBehaviour
         if (direction == 1)
         {
             Vector3 scale = transform.localScale;
-            scale.x = -3f;
+            scale.x = -1f;
             transform.localScale = scale;
         }
         else if (direction == -1)
         {
             Vector3 scale = transform.localScale;
-            scale.x = 3f;
+            scale.x = 1f;
             transform.localScale = scale;
         }
     }

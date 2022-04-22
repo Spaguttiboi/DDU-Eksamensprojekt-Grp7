@@ -19,7 +19,7 @@ public class PushPullObject : MonoBehaviour
 	private void Update()
 	{
 		correctMood = test.angry;
-		RaycastHit2D contactright = Physics2D.Raycast(transform.position, Vector2.right, 0.5f, objectLayerMask);
+		RaycastHit2D contactright = Physics2D.Raycast(transform.position, Vector2.right, 0.7f, objectLayerMask);
 
 		if (PushableObjectRight() && Input.GetKeyDown(KeyCode.E) && correctMood)
 		{
@@ -34,7 +34,7 @@ public class PushPullObject : MonoBehaviour
 			moveableObject.GetComponent<FixedJoint2D>().connectedBody = null;
 		}
 
-		RaycastHit2D contactleft = Physics2D.Raycast(transform.position, Vector2.left, 0.5f, objectLayerMask);
+		RaycastHit2D contactleft = Physics2D.Raycast(transform.position, Vector2.left, 0.7f, objectLayerMask);
 
 		if (PushableObjectLeft() && Input.GetKeyDown(KeyCode.E) && correctMood)
 		{
@@ -52,12 +52,12 @@ public class PushPullObject : MonoBehaviour
 
 	private bool PushableObjectRight()
 	{
-		return Physics2D.Raycast(transform.position, Vector2.right, 0.5f, objectLayerMask) != false;
+		return Physics2D.Raycast(transform.position, Vector2.right, 0.7f, objectLayerMask) != false;
 	}
 
 	private bool PushableObjectLeft()
 	{
-		return Physics2D.Raycast(transform.position, Vector2.left, 0.5f, objectLayerMask) != false;
+		return Physics2D.Raycast(transform.position, Vector2.left, 0.7f, objectLayerMask) != false;
 	}
 
 }
