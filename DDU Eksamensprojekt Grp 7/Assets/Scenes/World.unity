@@ -42024,8 +42024,10 @@ MonoBehaviour:
   platformLayerMask:
     serializedVersion: 2
     m_Bits: 192
-  moveSpeed: 15
-  jumpHeight: 6
+  playerSpeed: 0
+  scaredPlayerSpeed: 0
+  playerJumpHeight: 0
+  anxiousPlayerJumpHeight: 0
   pushLength: 0.7
   distance: 1
   numb: 1
@@ -42132,7 +42134,7 @@ Transform:
   m_GameObject: {fileID: 1368515351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -3, y: 3, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 1870048092}
   m_Father: {fileID: 0}
@@ -42163,18 +42165,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.045}
+  m_Offset: {x: 0.05, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.35, y: 0.69}
+    oldSize: {x: 1.1875, y: 2.15625}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27, y: 0.6}
+  m_Size: {x: 0.9, y: 1.85}
   m_EdgeRadius: 0
 --- !u!114 &1368515359
 MonoBehaviour:
