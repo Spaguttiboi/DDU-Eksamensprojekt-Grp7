@@ -7,11 +7,15 @@ public class Braindead : MonoBehaviour
 {
     Vector3 throwPoint;
     Vector3 targetPoint;
-    float throwVelocity = 15;
+    float throwVelocity;
 
     void Start()
     {
+<<<<<<< Updated upstream
         throwVelocity = GetComponentInParent<Thrower>().throwForce;
+=======
+        throwVelocity = GetComponentInParent<Thrower>().throwSpeed;
+>>>>>>> Stashed changes
 
         targetPoint = new Vector3(GetComponentInParent<Thrower>().xTargetValue, GetComponentInParent<Thrower>().yTargetValue);
     }

@@ -159,7 +159,11 @@ public class PlayerMovement : MonoBehaviour
             anxious = false;
             scared = true;
 
+<<<<<<< Updated upstream
 
+=======
+            
+>>>>>>> Stashed changes
         }
     }
 
