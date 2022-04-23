@@ -12,11 +12,7 @@ public class Thrower : MonoBehaviour
     string name;
     public float xOffset;
     public float yOffset;
-<<<<<<< Updated upstream
     public float throwForce;
-=======
-    public float throwSpeed;
->>>>>>> Stashed changes
 
     private void Start()
     {
