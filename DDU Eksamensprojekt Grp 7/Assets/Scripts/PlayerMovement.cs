@@ -182,6 +182,11 @@ public class PlayerMovement : MonoBehaviour
             audioSource.loop = false;
             audioSource.clip = numbSound;
             audioSource.Play();
+
+            MoveAnimation.SetBool("IsNumb", true);
+            MoveAnimation.SetBool("IsAngry", false);
+            MoveAnimation.SetBool("IsAnxiety", false);
+            MoveAnimation.SetBool("IsFear", false);
         }
         if (Input.GetKey(KeyCode.Alpha2) && angry == false)
         {
@@ -193,6 +198,11 @@ public class PlayerMovement : MonoBehaviour
             audioSource.loop = false;
             audioSource.clip = angrySound;
             audioSource.Play();
+
+            MoveAnimation.SetBool("IsNumb", false);
+            MoveAnimation.SetBool("IsAngry", true);
+            MoveAnimation.SetBool("IsAnxiety", false);
+            MoveAnimation.SetBool("IsFear", false);
         }
         if (Input.GetKey(KeyCode.Alpha3) && anxious == false)
         {
@@ -204,6 +214,11 @@ public class PlayerMovement : MonoBehaviour
             audioSource.loop = false;
             audioSource.clip = anxietySound;
             audioSource.Play();
+
+            MoveAnimation.SetBool("IsNumb", false);
+            MoveAnimation.SetBool("IsAngry", false);
+            MoveAnimation.SetBool("IsAnxiety", true);
+            MoveAnimation.SetBool("IsFear", false);
         }
         if (Input.GetKey(KeyCode.Alpha4) && scared == false)
         {
@@ -211,6 +226,11 @@ public class PlayerMovement : MonoBehaviour
             angry = false;
             anxious = false;
             scared = true;
+
+            MoveAnimation.SetBool("IsNumb", false);
+            MoveAnimation.SetBool("IsAngry", false);
+            MoveAnimation.SetBool("IsAnxiety", false);
+            MoveAnimation.SetBool("IsFear", true);
         }
 
         float direction = Input.GetAxisRaw("Horizontal");
