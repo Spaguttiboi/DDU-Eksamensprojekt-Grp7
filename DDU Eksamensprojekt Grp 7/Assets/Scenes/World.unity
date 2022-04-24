@@ -108106,13 +108106,13 @@ MonoBehaviour:
   anxious: 0
   scared: 0
   audioSource: {fileID: 2077535196}
-  jumpSound: {fileID: 8300000, guid: b20e11b074bfd074d98da3ae08a0ba9d, type: 3}
-  landSound: {fileID: 8300000, guid: 1a085ce0baefb21439cc2fdd6419a216, type: 3}
-  deathSound: {fileID: 8300000, guid: 089b56b790105fa47b093cb4d874142b, type: 3}
+  jumpSound: {fileID: 8300000, guid: 80c5e46a105fbe349818229d11d6dac5, type: 3}
+  landSound: {fileID: 8300000, guid: b6892b9d7699c3a4d8df43414be68a8a, type: 3}
+  deathSound: {fileID: 8300000, guid: 3b8fdb838803acc4c9d37c0621edd694, type: 3}
   angrySound: {fileID: 8300000, guid: d6d3ee059f7c3cb47a8d1671442cd3ad, type: 3}
-  anxietySound: {fileID: 8300000, guid: acff92c1c018ce742b14cfd3ea0b4d11, type: 3}
-  numbSound: {fileID: 8300000, guid: 98a7e77219fc7564bba4d4917d067ea1, type: 3}
-  runSound: {fileID: 8300000, guid: 8b461ee7c145ce342bbfb0cfe59a998b, type: 3}
+  anxietySound: {fileID: 8300000, guid: bcd5cfcb89082554e8f0ec18a3d6ab1a, type: 3}
+  numbSound: {fileID: 8300000, guid: 518e2935830ea3a4dacaaba2cf7c450d, type: 3}
+  runSound: {fileID: 8300000, guid: 230d26ea51e56684591eb95351e33ece, type: 3}
 --- !u!95 &1368515353
 Animator:
   serializedVersion: 3
