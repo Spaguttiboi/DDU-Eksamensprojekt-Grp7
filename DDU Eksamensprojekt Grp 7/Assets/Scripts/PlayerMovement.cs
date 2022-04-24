@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         MoodChooser();
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         return Physics2D.Raycast(transform.position, Vector2.down, 1.3f, platformLayerMask) != false;
     }
@@ -89,65 +89,68 @@ public class PlayerMovement : MonoBehaviour
     void MoodChooser()
     {
         //Mood system
-        if (Input.GetKey(KeyCode.Alpha1) && numb == false)
+        if (IsGrounded())
         {
-            numb = true;
-            angry = false;
-            anxious = false;
-            fear = false;
+            if (Input.GetKey(KeyCode.Alpha1) && numb == false)
+            {
+                numb = true;
+                angry = false;
+                anxious = false;
+                fear = false;
 
-            audioSource.loop = false;
-            audioSource.clip = numbSound;
-            audioSource.Play();
+                audioSource.loop = false;
+                audioSource.clip = numbSound;
+                audioSource.Play();
 
-            MoveAnimation.SetBool("IsNumb", true);
-            MoveAnimation.SetBool("IsAngry", false);
-            MoveAnimation.SetBool("IsAnxiety", false);
-            MoveAnimation.SetBool("IsFear", false);
-        }
-        if (Input.GetKey(KeyCode.Alpha2) && angry == false)
-        {
-            numb = false;
-            angry = true;
-            anxious = false;
-            fear = false;
+                MoveAnimation.SetBool("IsNumb", true);
+                MoveAnimation.SetBool("IsAngry", false);
+                MoveAnimation.SetBool("IsAnxiety", false);
+                MoveAnimation.SetBool("IsFear", false);
+            }
+            if (Input.GetKey(KeyCode.Alpha2) && angry == false)
+            {
+                numb = false;
+                angry = true;
+                anxious = false;
+                fear = false;
 
-            audioSource.loop = false;
-            audioSource.clip = angrySound;
-            audioSource.Play();
+                audioSource.loop = false;
+                audioSource.clip = angrySound;
+                audioSource.Play();
 
-            MoveAnimation.SetBool("IsNumb", false);
-            MoveAnimation.SetBool("IsAngry", true);
-            MoveAnimation.SetBool("IsAnxiety", false);
-            MoveAnimation.SetBool("IsFear", false);
-        }
-        if (Input.GetKey(KeyCode.Alpha3) && anxious == false)
-        {
-            numb = false;
-            angry = false;
-            anxious = true;
-            fear = false;
+                MoveAnimation.SetBool("IsNumb", false);
+                MoveAnimation.SetBool("IsAngry", true);
+                MoveAnimation.SetBool("IsAnxiety", false);
+                MoveAnimation.SetBool("IsFear", false);
+            }
+            if (Input.GetKey(KeyCode.Alpha3) && anxious == false)
+            {
+                numb = false;
+                angry = false;
+                anxious = true;
+                fear = false;
 
-            audioSource.loop = false;
-            audioSource.clip = anxietySound;
-            audioSource.Play();
+                audioSource.loop = false;
+                audioSource.clip = anxietySound;
+                audioSource.Play();
 
-            MoveAnimation.SetBool("IsNumb", false);
-            MoveAnimation.SetBool("IsAngry", false);
-            MoveAnimation.SetBool("IsAnxiety", true);
-            MoveAnimation.SetBool("IsFear", false);
-        }
-        if (Input.GetKey(KeyCode.Alpha4) && fear == false)
-        {
-            numb = false;
-            angry = false;
-            anxious = false;
-            fear = true;
+                MoveAnimation.SetBool("IsNumb", false);
+                MoveAnimation.SetBool("IsAngry", false);
+                MoveAnimation.SetBool("IsAnxiety", true);
+                MoveAnimation.SetBool("IsFear", false);
+            }
+            if (Input.GetKey(KeyCode.Alpha4) && fear == false)
+            {
+                numb = false;
+                angry = false;
+                anxious = false;
+                fear = true;
 
-            MoveAnimation.SetBool("IsNumb", false);
-            MoveAnimation.SetBool("IsAngry", false);
-            MoveAnimation.SetBool("IsAnxiety", false);
-            MoveAnimation.SetBool("IsFear", true);
+                MoveAnimation.SetBool("IsNumb", false);
+                MoveAnimation.SetBool("IsAngry", false);
+                MoveAnimation.SetBool("IsAnxiety", false);
+                MoveAnimation.SetBool("IsFear", true);
+            }
         }
 
         MoveDirection(numb, angry, anxious, fear);

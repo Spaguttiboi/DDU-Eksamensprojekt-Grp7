@@ -35,22 +35,22 @@ public class MoodSymbolScript : MonoBehaviour
 
     void SpriteChanger(bool numb, bool angry, bool anxious, bool fear, SpriteRenderer moodSpriteRenderer)
     {
-        if (Input.GetKey(KeyCode.Alpha1) && numb == false)
+        if (Input.GetKey(KeyCode.Alpha1) && numb == false && movementScript.IsGrounded())
         {
             moodSpriteRenderer.sprite = moodSprites[0];
             StartCoroutine(FadeSpriteOut(moodSpriteRenderer));
         }
-        if (Input.GetKey(KeyCode.Alpha2) && angry == false)
+        if (Input.GetKey(KeyCode.Alpha2) && angry == false && movementScript.IsGrounded())
         {
             moodSpriteRenderer.sprite = moodSprites[1];
             StartCoroutine(FadeSpriteOut(moodSpriteRenderer));
         }
-        if (Input.GetKey(KeyCode.Alpha3) && anxious == false)
+        if (Input.GetKey(KeyCode.Alpha3) && anxious == false && movementScript.IsGrounded())
         {
             moodSpriteRenderer.sprite = moodSprites[2];
             StartCoroutine(FadeSpriteOut(moodSpriteRenderer));
         }
-        if (Input.GetKey(KeyCode.Alpha4) && fear == false)
+        if (Input.GetKey(KeyCode.Alpha4) && fear == false && movementScript.IsGrounded())
         {
             moodSpriteRenderer.sprite = moodSprites[3];
             StartCoroutine(FadeSpriteOut(moodSpriteRenderer));
