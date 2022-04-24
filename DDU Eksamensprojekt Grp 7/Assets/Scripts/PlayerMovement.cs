@@ -53,9 +53,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //MoveDirection();
-
-        //MoodChooser();
 
         if (IsGrounded() && Input.GetButtonDown("Jump"))
         {

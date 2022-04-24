@@ -10,6 +10,7 @@ public class PushPullObject : MonoBehaviour
 	Animator playerAnimator;
 	GameObject moveableObject;
 	bool correctMood;
+	public bool connected;
 
 	private void Start()
 	{
@@ -20,9 +21,12 @@ public class PushPullObject : MonoBehaviour
 
 	private void Update()
 	{
+		//Checks if the player is in the correct mood and that there is a moveable object close enough to him.
 		correctMood = movementScript.angry;
 		RaycastHit2D contactright = Physics2D.Raycast(transform.position, Vector2.right, 0.7f, objectLayerMask);
+		RaycastHit2D contactleft = Physics2D.Raycast(transform.position, Vector2.left, 0.7f, objectLayerMask);
 
+		//Connects the player to the object and disables the FixedJoint2D
 		if (PushableObjectRight() && Input.GetKeyDown(KeyCode.E) && correctMood)
 		{
 			moveableObject = contactright.collider.gameObject;
@@ -30,24 +34,17 @@ public class PushPullObject : MonoBehaviour
 			moveableObject.GetComponent<FixedJoint2D>().enabled = false;
 			moveableObject.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
 
+			connected = true;
 			playerAnimator.SetBool("IsPushing", true);
 		}
-		else if (Input.GetKeyUp(KeyCode.E) && correctMood)
-		{
-			moveableObject.GetComponent<FixedJoint2D>().enabled = true;
-			moveableObject.GetComponent<FixedJoint2D>().connectedBody = null;
-			playerAnimator.SetBool("IsPushing", false);
-		}
-
-		RaycastHit2D contactleft = Physics2D.Raycast(transform.position, Vector2.left, 0.7f, objectLayerMask);
-
-		if (PushableObjectLeft() && Input.GetKeyDown(KeyCode.E) && correctMood)
+		else if (PushableObjectLeft() && Input.GetKeyDown(KeyCode.E) && correctMood)
 		{
 			moveableObject = contactleft.collider.gameObject;
 
 			moveableObject.GetComponent<FixedJoint2D>().enabled = false;
 			moveableObject.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
 
+			connected = true;
 			playerAnimator.SetBool("IsPushing", true);
 		}
 		else if (Input.GetKeyUp(KeyCode.E) && correctMood)
@@ -55,6 +52,7 @@ public class PushPullObject : MonoBehaviour
 			moveableObject.GetComponent<FixedJoint2D>().enabled = true;
 			moveableObject.GetComponent<FixedJoint2D>().connectedBody = null;
 
+			connected = false;
 			playerAnimator.SetBool("IsPushing", false);
 		}
 	}

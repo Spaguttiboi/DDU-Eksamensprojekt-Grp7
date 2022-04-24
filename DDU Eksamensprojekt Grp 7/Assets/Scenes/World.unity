@@ -1298,6 +1298,7 @@ GameObject:
   - component: {fileID: 407748483}
   - component: {fileID: 407748482}
   - component: {fileID: 407748481}
+  - component: {fileID: 407748486}
   m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
@@ -1435,6 +1436,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &407748486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407748480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d3c328137776b4faf3bed54b3f4e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &424820171
 GameObject:
   m_ObjectHideFlags: 0
@@ -108703,7 +108716,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0625, y: 2.25}
+    oldSize: {x: 1.1875, y: 2.15625}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -108727,6 +108740,7 @@ MonoBehaviour:
   objectLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  connected: 0
 --- !u!1 &1403955839
 GameObject:
   m_ObjectHideFlags: 0
