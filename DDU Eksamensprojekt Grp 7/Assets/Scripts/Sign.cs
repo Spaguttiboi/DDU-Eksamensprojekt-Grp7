@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Sign : MonoBehaviour
 {
-    public GameObject player;
     public GameObject keyPromt;
     public GameObject signCloseup;
+    bool playerInRange;
+
+    void Start()
+    {
+        keyPromt.SetActive(false);
+
+        playerInRange = false;
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -14,10 +21,7 @@ public class Sign : MonoBehaviour
         {
             keyPromt.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                signCloseup.SetActive(true);
-            }
+            playerInRange = true;
         }
     }
 
@@ -26,6 +30,19 @@ public class Sign : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             keyPromt.SetActive(false);
+
+            playerInRange = false;
+        }
+    }
+
+    void Update()
+    {
+        if (playerInRange == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                signCloseup.SetActive(true);
+            }
         }
     }
 }

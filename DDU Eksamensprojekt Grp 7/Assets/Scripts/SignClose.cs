@@ -6,7 +6,7 @@ public class SignClose : MonoBehaviour
 {
     public GameObject signCloseupParent;
 
-    void CloseSign()
+    public void CloseSign()
     {
         signCloseupParent.SetActive(false);
     }
