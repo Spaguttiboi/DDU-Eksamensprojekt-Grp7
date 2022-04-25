@@ -12,6 +12,9 @@ public class PushPullObject : MonoBehaviour
 	bool correctMood;
 	public bool connected;
 
+	public bool pullingLeft;
+	public bool pullingRight;
+
 	private void Start()
 	{
 		movementScript = gameObject.GetComponent<PlayerMovement>();
@@ -34,8 +37,8 @@ public class PushPullObject : MonoBehaviour
 			moveableObject.GetComponent<FixedJoint2D>().enabled = false;
 			moveableObject.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
 
-			connected = true;
 			playerAnimator.SetBool("IsPushing", true);
+			connected = true;
 		}
 		else if (PushableObjectLeft() && Input.GetKeyDown(KeyCode.E) && correctMood)
 		{
@@ -44,16 +47,20 @@ public class PushPullObject : MonoBehaviour
 			moveableObject.GetComponent<FixedJoint2D>().enabled = false;
 			moveableObject.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
 
-			connected = true;
+
 			playerAnimator.SetBool("IsPushing", true);
+			connected = true;
 		}
 		else if (Input.GetKeyUp(KeyCode.E) && correctMood)
 		{
 			moveableObject.GetComponent<FixedJoint2D>().enabled = true;
 			moveableObject.GetComponent<FixedJoint2D>().connectedBody = null;
 
+			pullingLeft = false;
+			pullingRight = false;
 			connected = false;
 			playerAnimator.SetBool("IsPushing", false);
+			playerAnimator.SetBool("IsPulling", false);
 		}
 	}
 

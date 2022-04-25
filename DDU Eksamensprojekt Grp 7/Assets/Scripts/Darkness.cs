@@ -9,7 +9,7 @@ public class Darkness : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene("World");
+            SceneManager.LoadScene("World",LoadSceneMode.Single);
         }
     }
 }

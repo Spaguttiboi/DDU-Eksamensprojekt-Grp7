@@ -26,7 +26,7 @@ public class Braindead : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("World");
+            SceneManager.LoadScene("World", LoadSceneMode.Single);
         }
         else
         {

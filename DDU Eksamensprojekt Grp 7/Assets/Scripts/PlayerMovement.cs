@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float playerJumpHeight;
     public float anxiousPlayerJumpHeight;
+    public float fearPlayerJumpHeight;
     float jumpHeight = 10f;
     float gravity = -9.82f;
 
@@ -30,8 +31,14 @@ public class PlayerMovement : MonoBehaviour
     public bool anxious = false;
     public bool fear = false;
 
+    bool pullingObjectLeft;
+    bool pullingObjectRight;
+    bool connected;
+
     Camera playerCamera;
     Animator MoveAnimation;
+    private PushPullObject pushPullScript;
+    public GameObject anxietyFog;
 
     public AudioSource audioSource;
 
@@ -49,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         MoveAnimation = GetComponent<Animator>();
         playerCamera = GetComponentInChildren<Camera>();
+        pushPullScript = GetComponent<PushPullObject>();
     }
 
     void Update()
@@ -76,6 +84,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         MoodChooser();
+
+        pullingObjectLeft = pushPullScript.pullingLeft;
+        pullingObjectRight = pushPullScript.pullingRight;
+        connected = pushPullScript.connected;
     }
 
     public bool IsGrounded()
@@ -176,15 +188,20 @@ public class PlayerMovement : MonoBehaviour
             audioSource.Play();
         }
         //Change jump height when anxious
-        if (numb || angry || fear)
+        if (numb || angry)
         {
             jumpHeight = playerJumpHeight;
-            playerCamera.orthographicSize = 5;
+            anxietyFog.SetActive(false);
         }
         else if (anxious)
         {
             jumpHeight = anxiousPlayerJumpHeight;
-            playerCamera.orthographicSize = 3;
+            anxietyFog.SetActive(true);
+        }
+        else if(fear)
+        {
+            jumpHeight = fearPlayerJumpHeight;
+            anxietyFog.SetActive(false);
         }
 
         //Visual system
@@ -194,13 +211,13 @@ public class PlayerMovement : MonoBehaviour
 
     void FlipPlayerModel(float direction, bool angry)
     {
-        if (direction == 1 && angry == false || direction == -1 && angry)
+        if (direction == 1 && angry == false || direction == -1 && angry || direction == 1 && connected && pullingObjectLeft || direction == -1 && connected && pullingObjectRight)
         {
             Vector3 scale = transform.localScale;
             scale.x = -1f;
             transform.localScale = scale;
         }
-        else if (direction == -1 && angry == false || direction == 1 && angry)
+        else if (direction == -1 && angry == false || direction == 1 && angry || direction == -1 && connected && pullingObjectLeft || direction == -1 && connected && pullingObjectRight)
         {
             Vector3 scale = transform.localScale;
             scale.x = 1f;
@@ -214,6 +231,7 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + Vector2.left * transform.localScale.x * pushLength);
     }
 
+    /*
     void temperaryMovementSystem()
     {
         //Mood system
@@ -314,4 +332,5 @@ public class PlayerMovement : MonoBehaviour
         FlipPlayerModel(direction, angry);
         MoveAnimation.SetFloat("Speed", Mathf.Abs(direction));
     }
+    */
 }
