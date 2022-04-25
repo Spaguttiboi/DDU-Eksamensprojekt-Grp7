@@ -193,19 +193,28 @@ public class PlayerMovement : MonoBehaviour
             audioSource.Play();
         }
         //Change jump height when anxious
-        if (numb || angry)
+        if (numb)
         {
+            playerCamera.orthographicSize = 7;
             jumpHeight = playerJumpHeight;
             anxietyFog.SetActive(false);
         }
         else if (anxious)
         {
+            playerCamera.orthographicSize = 5;
             jumpHeight = anxiousPlayerJumpHeight;
             anxietyFog.SetActive(true);
         }
-        else if(fear)
+        else if (fear)
         {
+            playerCamera.orthographicSize = 5;
             jumpHeight = fearPlayerJumpHeight;
+            anxietyFog.SetActive(false);
+        }
+        else if (angry)
+        {
+            playerCamera.orthographicSize = 5;
+            jumpHeight = playerJumpHeight;
             anxietyFog.SetActive(false);
         }
 
