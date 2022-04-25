@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     Animator MoveAnimation;
     private PushPullObject pushPullScript;
     public GameObject anxietyFog;
+    private SpriteRenderer spriteRenderer;
 
     public AudioSource audioSource;
 
@@ -59,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         MoveAnimation = GetComponent<Animator>();
         playerCamera = GetComponentInChildren<Camera>();
         pushPullScript = GetComponent<PushPullObject>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -215,17 +217,9 @@ public class PlayerMovement : MonoBehaviour
     void FlipPlayerModel(float direction, bool angry)
     {
         if (direction == 1 && angry == false || direction == -1 && angry || direction == 1 && connected && pullingObjectLeft || direction == -1 && connected && pullingObjectRight)
-        {
-            Vector3 scale = transform.localScale;
-            scale.x = -1f;
-            transform.localScale = scale;
-        }
+            spriteRenderer.flipX = false;
         else if (direction == -1 && angry == false || direction == 1 && angry || direction == -1 && connected && pullingObjectLeft || direction == -1 && connected && pullingObjectRight)
-        {
-            Vector3 scale = transform.localScale;
-            scale.x = 1f;
-            transform.localScale = scale;
-        }
+            spriteRenderer.flipX = true;
     }
 
     private void OnDrawGizmos()
