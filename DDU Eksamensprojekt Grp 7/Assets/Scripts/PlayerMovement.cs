@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        if (IsGrounded() && Input.GetButtonDown("Jump"))
+        if (IsGrounded() && Input.GetButtonDown("Jump") || IsGrounded() && Input.GetKey(KeyCode.W))
         {
             rigidbody.velocity = Vector2.up * Mathf.Sqrt((jumpHeight * rigidbody.gravityScale) * (-2) * gravity);
             MoveAnimation.SetBool("IsJumping", true);
