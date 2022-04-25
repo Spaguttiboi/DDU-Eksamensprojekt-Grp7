@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public float distance = 1f;
 
     private new Rigidbody2D rigidbody;
+    private BoxCollider2D boxCollider;
 
     //Ikke optimal og burde ændres hvis mulig
     public bool numb = true;
@@ -54,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
         MoveAnimation = GetComponent<Animator>();
         playerCamera = GetComponentInChildren<Camera>();
         pushPullScript = GetComponent<PushPullObject>();
@@ -92,7 +94,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, 1.3f, platformLayerMask) != false;
+        //return Physics2D.Raycast(transform.position, Vector2.down, 1.3f, platformLayerMask) != false;
+        return Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, platformLayerMask);
     }
 
     void MoodChooser()

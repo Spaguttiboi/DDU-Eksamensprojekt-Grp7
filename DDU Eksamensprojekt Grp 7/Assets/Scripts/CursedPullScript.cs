@@ -9,6 +9,7 @@ public class CursedPullScript : MonoBehaviour
     private PushPullObject pushPullScript;
     private PlayerMovement movementScript;
     private Rigidbody2D rigidbody;
+    private BoxCollider2D boxCollider;
     private FixedJoint2D fixedJoint;
     float mimicMovement;
     float speed = 3.1f;
@@ -21,6 +22,7 @@ public class CursedPullScript : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         pushPullScript = player.GetComponent<PushPullObject>();
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        boxCollider = gameObject.GetComponent<BoxCollider2D>();
         fixedJoint = gameObject.GetComponent<FixedJoint2D>();
     }
 
@@ -44,6 +46,6 @@ public class CursedPullScript : MonoBehaviour
 
     public bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, (transform.localScale.y / 2) + 0.1f, platformLayerMask) != false;
+        return Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .1f, platformLayerMask);
     }
 }
