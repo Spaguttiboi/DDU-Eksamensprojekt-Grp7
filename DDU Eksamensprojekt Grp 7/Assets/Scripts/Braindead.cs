@@ -33,8 +33,5 @@ public class Braindead : MonoBehaviour
             Destroy(transform.gameObject);
         }
     }
-
-
-
-
 }
+

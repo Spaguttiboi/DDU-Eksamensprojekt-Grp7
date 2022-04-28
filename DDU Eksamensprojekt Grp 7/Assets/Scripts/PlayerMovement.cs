@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
 
     Camera playerCamera;
     Animator MoveAnimation;
-    private PushPullObject pushPullScript;
     public GameObject anxietyFog;
     private SpriteRenderer spriteRenderer;
 
@@ -59,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         MoveAnimation = GetComponent<Animator>();
         playerCamera = GetComponentInChildren<Camera>();
-        pushPullScript = GetComponent<PushPullObject>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -88,10 +86,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         MoodChooser();
-
-        pullingObjectLeft = pushPullScript.pullingLeft;
-        pullingObjectRight = pushPullScript.pullingRight;
-        connected = pushPullScript.connected;
     }
 
     public bool IsGrounded()
@@ -236,107 +230,4 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, (Vector2)transform.position + Vector2.left * transform.localScale.x * pushLength);
     }
-
-    /*
-    void temperaryMovementSystem()
-    {
-        //Mood system
-        if (Input.GetKey(KeyCode.Alpha1) && numb == false)
-        {
-            numb = true;
-            angry = false;
-            anxious = false;
-            fear = false;
-
-            audioSource.loop = false;
-            audioSource.clip = numbSound;
-            audioSource.Play();
-
-            MoveAnimation.SetBool("IsNumb", true);
-            MoveAnimation.SetBool("IsAngry", false);
-            MoveAnimation.SetBool("IsAnxiety", false);
-            MoveAnimation.SetBool("IsFear", false);
-        }
-        if (Input.GetKey(KeyCode.Alpha2) && angry == false)
-        {
-            numb = false;
-            angry = true;
-            anxious = false;
-            fear = false;
-
-            audioSource.loop = false;
-            audioSource.clip = angrySound;
-            audioSource.Play();
-
-            MoveAnimation.SetBool("IsNumb", false);
-            MoveAnimation.SetBool("IsAngry", true);
-            MoveAnimation.SetBool("IsAnxiety", false);
-            MoveAnimation.SetBool("IsFear", false);
-        }
-        if (Input.GetKey(KeyCode.Alpha3) && anxious == false)
-        {
-            numb = false;
-            angry = false;
-            anxious = true;
-            fear = false;
-
-            audioSource.loop = false;
-            audioSource.clip = anxietySound;
-            audioSource.Play();
-
-            MoveAnimation.SetBool("IsNumb", false);
-            MoveAnimation.SetBool("IsAngry", false);
-            MoveAnimation.SetBool("IsAnxiety", true);
-            MoveAnimation.SetBool("IsFear", false);
-        }
-        if (Input.GetKey(KeyCode.Alpha4) && fear == false)
-        {
-            numb = false;
-            angry = false;
-            anxious = false;
-            fear = true;
-
-            MoveAnimation.SetBool("IsNumb", false);
-            MoveAnimation.SetBool("IsAngry", false);
-            MoveAnimation.SetBool("IsAnxiety", false);
-            MoveAnimation.SetBool("IsFear", true);
-        }
-
-        float direction = Input.GetAxisRaw("Horizontal");
-
-        if (direction == -1 && angry == false || direction == 1 && angry)
-            rigidbody.velocity = new Vector2(-moveSpeed, rigidbody.velocity.y);
-        else if (direction == 1 && angry == false || direction == -1 && angry)
-            rigidbody.velocity = new Vector2(+moveSpeed, rigidbody.velocity.y);
-        else
-            rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
-
-        //Change speed when scared
-        if (numb || angry || anxious)
-            moveSpeed = playerSpeed;
-        else if (fear)
-        {
-            moveSpeed = scaredPlayerSpeed;
-
-            audioSource.loop = true;
-            audioSource.clip = runSound;
-            audioSource.Play();
-        }
-        //Change jump height when anxious
-        if (numb || angry || fear)
-        {
-            jumpHeight = playerJumpHeight;
-            playerCamera.orthographicSize = 5;
-        }
-        else if (anxious)
-        {
-            jumpHeight = anxiousPlayerJumpHeight;
-            playerCamera.orthographicSize = 3;
-        }
-
-        //Visual system
-        FlipPlayerModel(direction, angry);
-        MoveAnimation.SetFloat("Speed", Mathf.Abs(direction));
-    }
-    */
 }

@@ -19,7 +19,7 @@ public class CursedPullScript : MonoBehaviour
 
 	private void Start()
 	{
-        GameObject player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Player");
         pushPullScript = player.GetComponent<PushPullObject>();
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();

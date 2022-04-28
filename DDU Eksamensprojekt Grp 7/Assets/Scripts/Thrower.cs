@@ -42,10 +42,6 @@ public class Thrower : MonoBehaviour
                 cooldown = cooldownReset;
 
             }
-            else
-            {
-                //cooldown -= Time.deltaTime; 
-            }
         }
     }
 }
